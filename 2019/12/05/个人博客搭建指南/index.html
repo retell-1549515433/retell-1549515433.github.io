@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>个人博客搭建指南 - retell&#39;s blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="前言其实早就想搭一个自己的博客了，但是高中觉得不太有必要去搭。到了大学自由时间稍微多一点啦，还是搭一个博客自己玩好啦~咳咳，那么，搭建博客和撰写博文的目的是什么？
+
+对知识进行自我消化和再加工
+提高,"> 
+    <meta name="author" content="retell"> 
+    <link rel="alternative" href="atom.xml" title="retell&#39;s blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/x.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">retell&#39;s blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">个人博客搭建指南</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">个人博客搭建指南</h1>
+        <div class="stuff">
+            <span>十二月 05, 2019</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>其实早就想搭一个自己的博客了，但是高中觉得不太有必要去搭。到了大学自由时间稍微多一点啦，还是搭一个博客自己玩好啦~<br><a id="more"></a><br>咳咳，那么，搭建博客和撰写博文的目的是什么？</p>
+<ul>
+<li>对知识进行自我消化和再加工</li>
+<li>提高markdown和latex编写能力</li>
+<li>对自己的时间线进行梳理</li>
+<li>遗忘前置知识时，可以通过浏览博客快速回忆（老年人的福音）</li>
+</ul>
+<p>以上是我个人搭建此博客的一些原因，如果你认为你符合其中的一条或几条，或出于其他原因想要搭建自己的博客，那么这篇博客可能会给予你一些帮助。不过，目前博客园和CSDN等网站博客编辑已经相对成熟了，而本文介绍的博客搭建方式还是相对复杂了一些，可能需要比较多的时间和精力来完成，所以请选择一种适合自己的方式来搭建自己的博客吧。<br>那么，进入正题吧</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>搭建个人博客方式非常多，本文仅介绍最为简单（同时也是相对流行）的一种方式，即<code>github_pages+hexo</code>方式.</p>
+<h3 id="1-前期准备工作"><a href="#1-前期准备工作" class="headerlink" title="1 前期准备工作"></a>1 前期准备工作</h3><p>  在正式开始之前，你应该确保如下事项已经完成：<br>  1.注册github账号，并且创建以自己用户名为名称的仓库，例如我的用户名为<code>retell</code>,那么我创建的仓库名名称应为<code>retell.github.io</code>，最终显示的名称应为<code>retell/retell.github.io</code>.<u>（这项内容非常重要,请确保你的仓库名称符合规范）</u><br>  2.安装git（ <a href="https://git-scm.com/downloads）" target="_blank" rel="noopener">https://git-scm.com/downloads）</a><br>  3.安装nodejs( nodejs中文网 <a href="http://nodejs.cn/download/)，并且完成了环境变量的更改" target="_blank" rel="noopener">http://nodejs.cn/download/)，并且完成了环境变量的更改</a></p>
+<h3 id="2-hexo的安装"><a href="#2-hexo的安装" class="headerlink" title="2 hexo的安装"></a>2 hexo的安装</h3><p>打开git bash，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure><br>选定一个目录，新建一个文件夹并将hexo安装在此处，例如在j盘新建了一个名为hexo的文件夹，那么我应该输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  cd &#x2F;j&#x2F;hexo&#x2F;</span><br><span class="line">$  hexo init</span><br></pre></td></tr></table></figure><br>之后hexo会在此目录下生成一些文件，我们接着输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  hexo g #生成网页</span><br><span class="line">$  hexo s #启动本地预览</span><br></pre></td></tr></table></figure><br>如果一切顺利，那么此时就根据系统提示，打开浏览器进入<code>http://localhost:4000</code>网址，这时你应该能看到一个博客界面，且有一篇名为“hello world”的博文。这说明我们的第一阶段任务已经顺利完成了。</p>
+<h3 id="3-生成网页"><a href="#3-生成网页" class="headerlink" title="3 生成网页"></a>3 生成网页</h3><p>我们可以准备向github上传我们的文件了，但是在此之前还有一些准备工作要做。首先确保hexo有权限对你的github仓库进行文件更改。此处利用ssh key实现。首先输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  cd ~&#x2F;. ssh</span><br></pre></td></tr></table></figure><br>如果提示文件不存在，那么创建新的ssh key即可。请输入下列代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure><br>根据提示进行，结束后会在用户目录下（win7系统下缺省位置为<code>c://Users/&quot;your account&quot;/.ssh</code>）生成一个名为<code>id_rsa.pub</code>的文件，打开并复制其内容，再进入你的github主页，在个人设置页面下<code>SSH and GPG keys</code>内新建ssh key，粘贴保存即可。之后输入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><br>在弹出的询问界面输入yes，回车，应当会看到如下的提示信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><br>这说明你的ssh key已配置成功，再输入以下两行代码对你的电脑进行github全局配置即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;retell&quot;&#x2F;&#x2F; 你的github用户名</span><br><span class="line">$ git config --global user.email  &quot;retell@163.com&quot;&#x2F;&#x2F; 填写你的github注册邮箱</span><br></pre></td></tr></table></figure><br>之后我们对<code>_config.yml</code>文件进行修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:liuxianan&#x2F;liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><br>这样我们的准备工作就全部完成了，最后我们只要输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  hexo d</span><br></pre></td></tr></table></figure><br>这样就完成了。等待两三分钟后，访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">retell.github.io</span><br></pre></td></tr></table></figure><br>这个网址，我们就可以看到自己<del>丑丑的</del>博客了</p>
+<h3 id="4-一些更改"><a href="#4-一些更改" class="headerlink" title="4 一些更改"></a>4 一些更改</h3><p>此时我们已经有一个可以正常访问的博客了，但是它太丑了……有没有什么办法可以让它好看一些呢？如果你是前端达人，当然可以自己去写html了，但是对于一般人，我们可以访问<a href="https://hexo.io/themes/" target="_blank" rel="noopener"> 这个网址</a>来寻找一个自己比较喜欢的主题，选中后我们可以打开git bash，进入hexo目录，直接安装该主题。以本博客使用的yilia主题为例，只需输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure><br>下载的主题可以在hexo安装目录下的themes查看，要使用该主题，只需在hexo目录中的<code>_config.yml</code>对<code>theme</code>一项进行修改即可，例如我想使用yilia主题，只需将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: landscape</span><br></pre></td></tr></table></figure><br>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure><br>即可，然后执行hexo g命令来生成网页。这样你就完成了博客主题的更换。此外需要说明的是，在每个theme文件夹中均有_config.yml文件，它们是各个主题独立的配置，而hexo文件夹下的配置则为全局配置（如用户名等）。在更改时根据提示修改即可   （<del>其实是因为太懒了不想写了……</del>）</p>
+<h3 id="博文的撰写和发布"><a href="#博文的撰写和发布" class="headerlink" title="博文的撰写和发布"></a>博文的撰写和发布</h3><p>博文的新建可以直接新建.md文件，也可以利用hexo自带的新建博文功能，这样的好处不需要自己写时间和日期。只需输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new blog &#39;title&#39;</span><br></pre></td></tr></table></figure><br>即可创建。所有的博文都被储存于hexo下的<code>/source/_posts</code> 目录中，对其修改即可。至于博文编辑，使用常见的makedown编辑器即可，在这里个人推荐另一款针对hexo的可视化编辑器：HexoEditor。下载地址<a href="https://github.com/zhuzhuyule/HexoEditor/releases/" target="_blank" rel="noopener"> 戳这里</a>。安装后直接打开运行即可。在博文撰写完成后对hexo重新提交，就可以在博客上查看了。这样我们就实现了个人博客的基本功能，可以在上面写一些自己的文章了。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>其实这篇文章是想写成类似“手把手教你搭建博客”的相对详尽一些的教程来的，但是自己搭的时候发现各种问题层出不穷，且在各个系统各个版本上出现的问题还都不尽相同……所以最后写成了这么一个相对简单的版本（其实还是因为懒癌犯了）。我在搭博客的过程中遇到的问题包括但不限于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo和latex适配问题</span><br><span class="line">yilia显示异常问题（2019.12.18upd：以换theme的方式解决了hhh）</span><br><span class="line">评论和统计配置问题</span><br><span class="line">git缓存清理问题</span><br></pre></td></tr></table></figure><br>这些问题其实网上都有博客进行了详尽的阐释，所以就不再逐一展开叙述了。希望本文能对除我之外的其他人有所帮助。本文写作仓促，如有纰漏请联系作者订正或在下方评论。希望你们都可以有一个让自己满意的blog~</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="https://retell-blog-1300893400.cos.ap-chengdu.myqcloud.com/STRFKR%20-%20Isabella%20of%20Castile.mp3">
+            </audio>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='8f09c1f2797321b07604'
+        data-cs='f2591299f02fe91e409939e9a7967052b3a2253a'
+        data-r='retell-1549515433.github.io'
+        data-o='retell-1549515433'
+        data-a='retell-1549515433'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
